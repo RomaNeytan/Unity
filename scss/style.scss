@@ -45,5 +45,25 @@ p{
     overflow: hidden;
 }
 
+// Logo
+
+@import "logo.scss";
+
+// Section__header
+
+@import "section.header.scss";
+
+// Ibg
+
+@import "ibg.scss";
+
 // Blocks
 
+@import "blocks/header";
+@import "blocks/banner";
+@import "blocks/invites";
+@import "blocks/clients";
+@import "blocks/details";
+@import "blocks/wedo";
+@import "blocks/customers";
+@import "blocks/footer";

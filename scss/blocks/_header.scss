@@ -1,0 +1,83 @@
+.header {
+    padding-top: 100px;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 1000;
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__logo {
+        margin:0px 0px 50px 0px;
+    }
+
+    &-menu {
+        &-list {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            
+            &__item {
+                &:not(:last-child){
+                    & + &{
+                        margin-left: 75px;
+                    }
+                }
+                &:last-child{
+                    &:before{
+                        content: " ";
+                        display: block;
+                        width: 2px;
+                        height: 200px;
+                        background: #313131;
+                        position: absolute;
+                        top:-200px;
+                    }
+                    position: absolute;
+                    right:35px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    background: #ffa800;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 60px;
+                    transition: transform .2s linear;
+    
+                    &:hover{
+                        transform: translateY(-60%);
+                    }
+                }
+            }
+
+            &__iccon{
+                width: 20px;
+                height: 20px;
+                fill: #000;
+            }
+    
+            &__link {
+                font-size: 20px;
+                color:$main-color;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                transition: color .2s linear;
+
+                &:hover{
+                    color:$suptitle-color;
+                }
+            }
+        }
+    }
+}
+

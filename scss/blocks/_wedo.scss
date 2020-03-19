@@ -1,0 +1,138 @@
+.wedo {
+    background: $main-color;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 10;
+    
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__slider {
+        width: 550px;
+        height: 450px;
+        background: transparent;
+        border: 20px solid $title-color;
+    }
+
+    &-item {
+        position: relative;
+        height: 100%;
+        padding-bottom: 65%;
+        &__img {
+            width: 110%;
+            height: 110%;
+            position: absolute;
+            top: 6.5%;
+            left: 5%;
+        }
+    }
+    // Right
+    &-row {
+        &__column {
+        }
+        &__item {
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 40px;
+            margin-bottom: 45px;
+            border-bottom: 1px solid #e6e6e6;
+
+            &_thirty {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                border-bottom: none;
+            }
+        }
+
+        &__block {
+            display: flex;
+            align-items: center;
+            &_first {
+                padding-right: 85px;
+            }
+        }
+
+        &__img {
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        &__title {
+            font-size: 30px;
+            text-transform: uppercase;
+            color: $title-color;
+            font-weight: normal;
+            padding-left: 20px;
+        }
+    }
+}
+
+// Modal
+
+.wedo-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    &__row {
+        width: 100%;
+        position: relative;
+        max-width: 600px;
+        background: #694fca;
+        padding: 35px 45px 35px 35px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        z-index: 1;
+        .btn {
+            background: none;
+            border: 0;
+            font-size: 0;
+            color: transparent;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__iccon {
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        fill: #fff;
+        transition: transform 0.2s linear, fill 0.2s linear;
+
+        &:hover {
+            transform: translateY(-4px);
+            fill: #000;
+        }
+    }
+
+    &__title {
+        font-size: 70px;
+        text-transform: uppercase;
+        color: $suptitle-color;
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        font-size: 18px;
+        color: $main-color;
+        line-height: 40px;
+        @include Pop();
+    }
+}

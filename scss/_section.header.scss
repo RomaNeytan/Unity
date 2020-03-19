@@ -1,0 +1,58 @@
+.section-header {
+    display: flex;
+    justify-content: center;
+    margin: -305px 0px 150px 0px;
+    position: relative;
+    &__number {
+        position: absolute;
+        bottom: -75px;
+        left: 10px;
+        font-size: 352px;
+        font-weight: normal;
+        color: $suptitle-color;
+
+        &_details{
+            left:965px;
+            color:$title-color;
+        }
+        &_wedo{
+            left:800px;
+            color:$title-color;
+            bottom: -190px;
+        }
+    }
+
+    &__content {
+        border: 20px solid $main-color;
+        padding: 300px 100px 20px 35px;
+        position: relative;
+        &:after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top:315px;
+            right:-299px;
+            width: 475px;
+            height: 340px;
+            background: url("../images/invites/brush-box.png") 0 0 / 100% repeat;
+            background-size: cover;
+        }
+    }
+
+    &__title {
+        font-size: 100px;
+        color: $main-color;
+        line-height: 90px;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    &__desctiption {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: $main-color;
+    }
+}
+
+

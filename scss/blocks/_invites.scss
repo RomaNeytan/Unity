@@ -1,0 +1,75 @@
+.invites {
+    background: #694fca;
+    padding: 75px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-bottom: 75px;
+    }
+
+    &__title {
+        width: 100%;
+        max-width: 350px;
+        font-size: 100px;
+        color: $main-color;
+        line-height: 90px;
+        margin-right: 65px;
+        font-weight: normal;
+    }
+
+    &__text {
+        font-size: 20px;
+        color: $main-color;
+        line-height: 40px;
+        @include Pop();
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 -25px;
+    }
+
+    &__column {
+        flex: 0 1 33.33333%;
+        padding: 0 25px;
+    }
+
+    &-item {
+        &__iccon {
+            width: 45px;
+            height: 45px;
+            fill: #fff;
+            transition: fill 0.2s linear;
+
+            &:hover {
+                fill: $suptitle-color;
+            }
+        }
+
+        &__title {
+            margin-top: 10px;
+            font-size: 30px;
+            color: $suptitle-color;
+            text-transform: uppercase;
+            font-weight: normal;
+            &:after {
+                content: " ";
+                display: block;
+                width: 50px;
+                height: 1px;
+                background: $main-color;
+                margin: 20px 0 35px;
+            }
+        }
+
+        &__description {
+            font-size: 16px;
+            color:$main-color;
+            @include Pop();
+            line-height: 30px;
+        }
+    }
+}

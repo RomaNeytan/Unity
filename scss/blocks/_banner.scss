@@ -1,0 +1,141 @@
+.banner {
+    background: rgb(22, 22, 22) url("../../images/banner/bg.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 350px 0 300px 0;
+
+    &__row {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 100px;
+        color: $suptitle-color;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+
+    &__description {
+        font-size: 40px;
+        color: $main-color;
+        line-height: 45px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    &__copyright {
+        transform: rotate(-90deg) translate3d(0,0,0);
+        position: absolute;
+        right:-75px;
+        margin-top: 75px;
+        span{
+            font-size: 16px;
+            color:$main-color;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+    }
+
+    &-social {
+        position: absolute;
+        top:225px;
+        right:15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__item {
+            transform: rotate(-90deg) translate3d(0,0,0);
+            font-size: 16px;
+            color:$main-color;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            display: block;
+            transition: color .2s linear;
+            &:first-child{
+                margin-top: 75px;
+            }
+            &:hover{
+                color:$suptitle-color;
+            }
+            & + &{
+                margin-top: 100px;
+            }
+            
+        }
+    }
+    &-scroll {
+        display: inline-block;
+        margin-top: 200px;
+        position: relative;
+        &:before{
+            content: " ";
+            display: block;
+            width:58px;
+            height: 1px;
+            background: $main-color;
+            position: absolute;
+            top:-56px;
+            left:7px;
+        }
+
+        &__title {
+            display: inline-block;
+            font-size: 26px;
+            color: $main-color;
+            text-transform: uppercase;
+            font-weight: normal;
+            letter-spacing: 4px;
+            position: relative;
+
+            &:before {
+                content: " ";
+                display: block;
+                width:1px;
+                height: 50px;
+                background: $main-color;
+                position: absolute;
+                top:-55px;
+                left:7px;
+            }
+    
+            &:after {
+                content: " ";
+                display: block;
+                width:1px;
+                height: 50px;
+                background: $main-color;
+                position: absolute;
+                top:-55px;
+                right:11px;
+            }
+        }
+
+        &__item {
+            margin-top: 45px;
+            display: block;
+        }
+
+        &__iccon {
+            width: 25px;
+            height: 25px;
+            fill: #fff;
+            position: relative;
+            animation: arrow 2s infinite linear;
+        }
+    }
+}
+
+@keyframes arrow{
+    0%{
+        top:0;
+    }
+    50%{
+        top:20px;
+    }
+    100%{
+        top:0;
+    }
+}

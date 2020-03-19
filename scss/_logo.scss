@@ -1,0 +1,12 @@
+.logo{
+    .logo{
+        font-size: 30px;
+        color: $main-color;
+        font-weight: 900;
+        @include Goth();
+        border: 2px solid $main-color;
+        padding: 4px 12px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}
