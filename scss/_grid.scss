@@ -1,6 +1,18 @@
-.container{
+.container {
     width: 100%;
-    max-width:1205px;
+    max-width: 1205px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @media (max-width: 1200px) {
+        max-width: 970px;
+    }
+
+    @media (max-width: 992px) {
+        max-width: 750px;
+    }
+
+    @media (max-width: 767px) {
+        max-width: none;
+    }
 }

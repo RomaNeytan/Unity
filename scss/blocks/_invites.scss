@@ -1,3 +1,4 @@
+
 .invites {
     background: #694fca;
     padding: 75px 0;
@@ -70,6 +71,53 @@
             color:$main-color;
             @include Pop();
             line-height: 30px;
+        }
+    }
+
+    @media (max-width:767px){
+        padding: 35px 0;
+        &__inner{
+            flex-direction: column;
+            margin-bottom: 35px;
+        }
+        &__title{
+            max-width:none;
+            margin-bottom: 15px;
+            margin-right: 0;
+            font-size: 72px;
+        }
+        &__slider{
+            flex-wrap: wrap;
+        }
+        &__column{
+            flex:0 1 50%;
+
+            &:last-child{
+                margin-top: 35px;
+            }
+        }
+    }
+     @media (max-width:575px){
+        &__inner{
+            margin-top: 165px;
+        }
+        &__title{
+            font-size: 60px;
+            line-height: 75px;
+        }
+        &__column{
+            text-align: center;
+            flex:0 1 100%;
+            & + &{
+                margin-top: 25px;
+            }
+        }
+        &-item{
+            &__title{
+                &:after{
+                    margin: 15px auto 25px;
+                }
+            }
         }
     }
 }

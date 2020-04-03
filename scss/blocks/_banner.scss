@@ -27,13 +27,13 @@
     }
 
     &__copyright {
-        transform: rotate(-90deg) translate3d(0,0,0);
+        transform: rotate(-90deg) translate3d(0, 0, 0);
         position: absolute;
-        right:-75px;
+        right: -75px;
         margin-top: 75px;
-        span{
+        span {
             font-size: 16px;
-            color:$main-color;
+            color: $main-color;
             text-transform: uppercase;
             letter-spacing: 4px;
         }
@@ -41,44 +41,43 @@
 
     &-social {
         position: absolute;
-        top:225px;
-        right:15px;
+        top: 225px;
+        right: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         &__item {
-            transform: rotate(-90deg) translate3d(0,0,0);
+            transform: rotate(-90deg) translate3d(0, 0, 0);
             font-size: 16px;
-            color:$main-color;
+            color: $main-color;
             text-transform: uppercase;
             letter-spacing: 4px;
             display: block;
-            transition: color .2s linear;
-            &:first-child{
+            transition: color 0.2s linear;
+            &:first-child {
                 margin-top: 75px;
             }
-            &:hover{
-                color:$suptitle-color;
+            &:hover {
+                color: $suptitle-color;
             }
-            & + &{
+            & + & {
                 margin-top: 100px;
             }
-            
         }
     }
     &-scroll {
         display: inline-block;
         margin-top: 200px;
         position: relative;
-        &:before{
+        &:before {
             content: " ";
             display: block;
-            width:58px;
+            width: 58px;
             height: 1px;
             background: $main-color;
             position: absolute;
-            top:-56px;
-            left:7px;
+            top: -56px;
+            left: 7px;
         }
 
         &__title {
@@ -93,23 +92,23 @@
             &:before {
                 content: " ";
                 display: block;
-                width:1px;
+                width: 1px;
                 height: 50px;
                 background: $main-color;
                 position: absolute;
-                top:-55px;
-                left:7px;
+                top: -55px;
+                left: 7px;
             }
-    
+
             &:after {
                 content: " ";
                 display: block;
-                width:1px;
+                width: 1px;
                 height: 50px;
                 background: $main-color;
                 position: absolute;
-                top:-55px;
-                right:11px;
+                top: -55px;
+                right: 11px;
             }
         }
 
@@ -126,16 +125,79 @@
             animation: arrow 2s infinite linear;
         }
     }
+
+    @media (max-width: 1300px) {
+        &__row {
+            max-width: 900px;
+        }
+    }
+    @media (max-width: 1145px) {
+        &-social {
+            padding: 0 15px;
+            width: 100%;
+            justify-content: center;
+            flex-direction: row;
+            top: 35px;
+            left: 0;
+            &__item {
+                transform: rotate(0);
+                & + & {
+                    margin-left: 55px;
+                }
+                margin-top: 0 !important;
+            }
+        }
+    }
+    @media (max-width: 990px) {
+        padding: 315px 0 300px 0;
+        &__copyright {
+            display: none;
+        }
+        &__row {
+            padding: 0 15px;
+        }
+        &__title {
+            font-size: 90px;
+        }
+        &__description {
+            font-size: 30px;
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 225px 0 155px 0;
+    }
+    @media (max-width: 575px) {
+        &__title {
+            font-size: 60px;
+        }
+        &__description {
+            font-size: 19px;
+        }
+    }
+    @media (max-width: 500px) {
+        padding: 165px 0 85px 0;
+        &-scroll {
+            margin-top: 100px;
+        }
+        &-social {
+            display: none;
+        }
+    }
+    @media (max-width: 450px) {
+        &__title {
+            font-size: 51px;
+        }
+    }
 }
 
-@keyframes arrow{
-    0%{
-        top:0;
+@keyframes arrow {
+    0% {
+        top: 0;
     }
-    50%{
-        top:20px;
+    50% {
+        top: 20px;
     }
-    100%{
-        top:0;
+    100% {
+        top: 0;
     }
 }

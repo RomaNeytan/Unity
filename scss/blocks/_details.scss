@@ -23,4 +23,12 @@
             color: $title-color;
         }
     }
+
+    @media (max-width:860px){
+        .section-header__content{
+            &:after{
+                display: none;
+            }
+        }
+    }
 }

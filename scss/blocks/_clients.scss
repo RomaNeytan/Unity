@@ -4,6 +4,7 @@
     background: #c4c4c5;
     background-size: cover;
     padding-top: 1150px;
+    padding-bottom: 0;
 
     &::before {
         content: " ";
@@ -106,6 +107,102 @@
             border-style: solid;
             border-width: 15px 0 15px 20px;
             border-color: transparent transparent transparent #000000;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__title {
+            font-size: 235px;
+        }
+    }
+    @media (max-width: 992px) {
+        padding-top: 830px;
+        &__header {
+            margin-top: -750px;
+        }
+        &__title {
+            font-size: 180px;
+        }
+        &__suptitle {
+            font-size: 55px;
+            line-height: 47px;
+        }
+        &__description {
+            font-size: 18px;
+            max-width: 575px;
+        }
+    }
+    @media (max-width: 767px) {
+        padding-top: 710px;
+        &__header {
+            margin-top: -650px;
+        }
+        &__button {
+            width: 150px;
+            height: 150px;
+
+            &:before {
+                width: 75px;
+                height: 75px;
+            }
+            &:after {
+                width: 37.5px;
+                height: 37.5px;
+            }
+
+            .btn {
+                border-width: 7.5px 0 7.5px 10px;
+            }
+        }
+    }
+    @media (max-width: 748px) {
+        &__title {
+            font-size: 136px;
+            width: 100%;
+        }
+        &__suptitle {
+            font-size: 35px;
+            line-height: 47px;
+        }
+        &__description {
+            font-size: 15px;
+            max-width: 575px;
+            line-height: 20px;
+        }
+    }
+    @media (max-width: 575px) {
+        padding-top: 520px;
+        &__header {
+            margin-top: -510px;
+        }
+        &__title {
+            font-size: 72px;
+        }
+        &__suptitle {
+            font-size: 30px;
+            line-height: 47px;
+        }
+        &__description {
+            font-size: 13px;
+            max-width: 575px;
+            line-height: 20px;
+        }
+        &__button {
+            width: 150px;
+            height: 150px;
+
+            &:before {
+                width: 75px;
+                height: 75px;
+            }
+            &:after {
+                width: 37.5px;
+                height: 37.5px;
+            }
+
+            .btn {
+                border-width: 7.5px 0 7.5px 10px;
+            }
         }
     }
 }

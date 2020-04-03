@@ -48,10 +48,189 @@
         text-transform: uppercase;
     }
 
-    &__desctiption {
+    &__description {
         font-size: 30px;
         text-transform: uppercase;
         color: $main-color;
+    }
+
+    @media (max-width:1200px){
+        margin: -250px 0px 150px 0px;
+        &__title{
+            font-size: 90px;
+        }
+        &__number{
+            bottom: -57px;
+            left: -60px;
+            font-size: 260px;
+            
+            &_details{
+                left:850px;
+            }
+            &_wedo{
+                left:800px;
+                bottom: -190px;
+            }
+        }
+        &__content{
+            padding: 250px 100px 20px 20px;
+            &:after{
+                width: 370px;
+                height: 270px;
+                top: 315px;
+                right: -203px;
+            }
+        }
+    }
+    @media (max-width:1100px){
+        &__title{
+            font-size: 90px;
+        }
+        &__number{
+            bottom: -57px;
+            left: -30px;
+            font-size: 260px;
+
+            &_details{
+                left:805px;
+            }
+            &_wedo{
+                left:800px;
+                bottom: -190px;
+            }
+        }
+        &__content{
+            padding: 250px 100px 20px 20px;
+            &:after{
+                width: 370px;
+                height: 270px;
+                top: 315px;
+                right: -203px;
+            }
+        }
+    }
+
+    @media (max-width:1020px){
+        &__number{
+            &_wedo{
+                left:700px;
+                bottom: -190px;
+            }
+        }
+    }
+    @media (max-width:992px){
+        margin: -200px 0px 150px 0px;
+        &__title{
+            font-size: 72px;
+        }
+        &__number{
+            bottom: 150px;
+            left: 515px;
+            font-size: 220px;
+
+            &_details{
+                left:175px;
+            }
+            &_wedo{
+                left:700px;
+                bottom: -140px;
+            }
+        }
+        &__content{
+            padding: 200px 100px 20px 20px;
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width:895px){
+        &__number{
+            &_wedo{
+                left:40%;
+            }
+        }
+    }
+    @media (max-width:767px){
+        margin: -170px 0px 75px 0px;
+        &__content{
+            padding: 150px 40px 20px 20px;
+            &:after{
+                display: none;
+            }
+        }
+        &__number{
+            bottom: 150px;
+            left: 490px;
+            font-size: 185px;
+
+            &_details{
+                left:175px;
+            }
+            &_wedo{
+                left:40%;
+                bottom: -140px;
+            }
+        }
+    }
+    @media (max-width:730px){
+        &__content{
+            border-width:15px;
+        }
+        &__number{
+            bottom: 150px;
+            left: 420px;
+            font-size: 185px;
+
+            &_details{
+                left:175px;
+            }
+            &_wedo{
+                left:40%;
+                bottom: -140px;
+            }
+        }
+    }
+    @media (max-width:630px){
+        &__number{
+            right:0;
+            font-size: 185px;
+        }
+        &__title{
+            font-size: 60px;
+            line-height: 60px;
+        }
+    }
+    @media (max-width:575px){
+        margin: -140px 0px 75px 0px;
+        &__content{
+            padding: 70px 20px 20px 20px !important;
+            text-align: center;
+            &:after{
+                display: none;
+            }
+        }
+        &__number{
+            left:40%;
+            bottom:-160px;
+            font-size: 145px;
+
+            &_wedo{
+                bottom: -85px;
+            }
+        }
+        &__title{
+            margin-bottom: 15px;
+        }
+        &__description{
+            font-size: 26px;
+        }
+    }
+    @media (max-width: 500px){
+        &__content{
+            border-width: 10px;
+        }
+        margin: -85px 0px 75px 0px;
     }
 }
 
