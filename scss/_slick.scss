@@ -1,0 +1,86 @@
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{
+    &:focus{
+        outline: none;
+    }
+}
+
+.wedo__slider{
+    position: relative;
+}
+
+.wedo__slider .slick-arrow{
+    position: absolute;
+    top:55px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border:0;
+    cursor: pointer;
+
+    &:focus{
+        outline: none;
+    }
+
+    @media (max-width:575px){
+        top:235px;
+    }
+    @media (max-width:485px){
+        top:165px;
+    }
+}
+
+.wedo__slider .slick-arrow.slick-prev{
+    left:30px;
+    background: url("../images/wedo/left.svg") 0 0 / 100% repeat;
+
+    &:after{
+        content: "Prev";
+        display: block;
+        font-size: 28px;
+        color:#010101;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        @include Abr();
+        position: absolute;
+        left:40px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    @media (max-width:485px){
+        left:10px;
+    }
+}
+
+.wedo__slider .slick-arrow.slick-next{
+    left:230px;
+    background: url("../images/wedo/right.svg") 0 0 / 100% repeat;
+
+    &:before{
+        content: "Next";
+        display: block;
+        font-size: 28px;
+        color:#010101;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        @include Abr();
+        position: absolute;
+        left:-60px;
+        top:50%;
+        transform: translateY(-50%);
+    }
+    @media (max-width:485px){
+        left:190px;
+    }
+}
+  

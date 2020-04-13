@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "AbrahamLincoln";
   src: url("../fonts/AbrahamLincoln.ttf"); }
@@ -245,7 +246,7 @@ p {
     .section-header {
       margin: -85px 0px 75px 0px; }
       .section-header__content {
-        border-width: 10px; } }
+        border-width: 10px !important; } }
 
 .ibg {
   background-position: center;
@@ -262,13 +263,86 @@ p {
   opacity: 0;
   visibility: hidden; }
 
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden; }
+
+/* Лента слайдов */
+.slick-track {
+  display: flex; }
+
+/* Слайд */
+.slick-slide:focus {
+  outline: none; }
+
+.wedo__slider {
+  position: relative; }
+
+.wedo__slider .slick-arrow {
+  position: absolute;
+  top: 55px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: 0;
+  cursor: pointer; }
+  .wedo__slider .slick-arrow:focus {
+    outline: none; }
+  @media (max-width: 575px) {
+    .wedo__slider .slick-arrow {
+      top: 235px; } }
+  @media (max-width: 485px) {
+    .wedo__slider .slick-arrow {
+      top: 165px; } }
+
+.wedo__slider .slick-arrow.slick-prev {
+  left: 30px;
+  background: url("../images/wedo/left.svg") 0 0/100% repeat; }
+  .wedo__slider .slick-arrow.slick-prev:after {
+    content: "Prev";
+    display: block;
+    font-size: 28px;
+    color: #010101;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: "AbrahamLincoln";
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%); }
+  @media (max-width: 485px) {
+    .wedo__slider .slick-arrow.slick-prev {
+      left: 10px; } }
+
+.wedo__slider .slick-arrow.slick-next {
+  left: 230px;
+  background: url("../images/wedo/right.svg") 0 0/100% repeat; }
+  .wedo__slider .slick-arrow.slick-next:before {
+    content: "Next";
+    display: block;
+    font-size: 28px;
+    color: #010101;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: "AbrahamLincoln";
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%); }
+  @media (max-width: 485px) {
+    .wedo__slider .slick-arrow.slick-next {
+      left: 190px; } }
+
 .nav-toggle {
   display: none;
   background: none;
   border: 0;
   padding: 9px 1px;
-  margin: 0 auto;
-  max-width: 30px; }
+  max-width: 30px;
+  margin-bottom: 20px;
+  margin-left: 25px; }
   .nav-toggle:focus {
     outline: none; }
   .nav-toggle__item {
@@ -312,6 +386,30 @@ p {
   left: 0;
   right: 0;
   z-index: 1000; }
+  .header.active {
+    padding-top: 20px; }
+  .header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+    background: #a26464;
+    padding: 25px 0 25px; }
+    .header.fixed .banner-social {
+      display: none; }
+    .header.fixed .header__logo {
+      margin: 0px 0px 25px 0px; }
+    .header.fixed .header-menu-list__item:last-child:before {
+      background: #6e967e; }
+    @media (max-width: 991px) {
+      .header.fixed {
+        padding: 25px 0 25px; } }
+    @media (max-width: 767px) {
+      .header.fixed .header__logo {
+        margin: 0; }
+      .header.fixed .nav-toggle {
+        margin-bottom: 0; } }
   .header__inner {
     display: flex;
     flex-direction: column;
@@ -374,27 +472,31 @@ p {
         font-size: 18px; } }
   @media (max-width: 767px) {
     .header__inner {
-      text-align: start; }
+      text-align: start;
+      flex-direction: row; }
     .header__logo {
       margin: 0px 0px 25px 0px;
       text-align: center;
       position: relative;
       z-index: 10; }
+      .header__logo .logo {
+        text-align: center; }
     .header-menu {
       position: fixed;
-      top: -100%;
+      top: -660%;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 660%;
       background: #a92727;
-      overflow: auto; }
+      overflow: auto;
+      transition: all .3s ease 0s; }
       .header-menu-list {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 170px 0 0 15px; }
+        padding: 150px 0 0 15px; }
         .header-menu-list__link {
-          font-size: 20px; }
+          font-size: 30px; }
         .header-menu-list__item {
           margin-top: 7px;
           padding-left: 15px; }
@@ -403,20 +505,12 @@ p {
           .header-menu-list__item:first-child {
             margin-top: 0; }
           .header-menu-list__item:last-child {
-            display: flex;
-            position: relative;
-            left: 15px;
-            align-items: flex-start;
-            margin-top: 7px;
-            transform: translateY(0);
-            transition: background .2s linear; }
-            .header-menu-list__item:last-child:hover {
-              transform: translateY(0);
-              background: green; }
-            .header-menu-list__item:last-child:before {
-              display: none; }
+            display: none; }
     .header-menu.active {
       top: 0; } }
+  @media screen and (max-width: 767px) and (min-height: 320px) and (max-height: 414px) {
+    .header-menu.active .header-menu-list {
+      padding: 65px 0 0 15px; } }
   @media (max-width: 500px) {
     .header {
       padding-top: 50px; } }
@@ -870,7 +964,7 @@ p {
       height: 110%;
       position: absolute;
       top: 6.5%;
-      left: 5%; }
+      left: 0; }
   .wedo-row__item {
     padding: 0 20px;
     display: flex;
@@ -903,11 +997,13 @@ p {
     .wedo {
       padding-top: 75px; }
       .wedo__inner {
+        display: flex;
         flex-direction: column; }
       .wedo__slider {
-        margin-bottom: 45px; }
+        margin-top: 45px; }
       .wedo-row {
-        padding: 0; } }
+        padding: 0;
+        order: -1; } }
   @media (max-width: 860px) {
     .wedo {
       padding-top: 0;
@@ -924,7 +1020,10 @@ p {
       padding-bottom: 65px; }
       .wedo__slider {
         width: 350px;
-        height: 300px; }
+        height: 300px;
+        border-width: 10px;
+        margin-top: 0;
+        margin-bottom: 15px; }
       .wedo-row__item {
         margin-bottom: 20px;
         padding-bottom: 20px; }
@@ -954,6 +1053,8 @@ p {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0); }
+  .wedo-modal.close {
+    display: none; }
   .wedo-modal__row {
     width: 100%;
     position: relative;
@@ -1081,7 +1182,8 @@ p {
       .customers__description {
         font-size: 22px; }
         .customers__description:after {
-          margin: 25px auto; } }
+          margin: 25px auto;
+          height: 50px; } }
 
 .customers-item {
   cursor: pointer;

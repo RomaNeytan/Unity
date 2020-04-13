@@ -28,7 +28,7 @@
             height: 110%;
             position: absolute;
             top: 6.5%;
-            left: 5%;
+            left: 0;
         }
     }
     // Right
@@ -83,13 +83,15 @@
     @media (max-width:992px){
         padding-top: 75px;
         &__inner{
+            display: flex;
             flex-direction: column;
         }
         &__slider{
-            margin-bottom: 45px;
+            margin-top: 45px;
         }
         &-row{
             padding: 0;
+            order:-1;
         }
     }
 
@@ -113,6 +115,9 @@
         &__slider{
             width: 350px;
             height: 300px;
+            border-width:10px;
+            margin-top:0;
+            margin-bottom: 15px;
         }
         &-row{
             &__item{
@@ -165,6 +170,10 @@
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
 
+    &.close{
+        display: none;
+    }
+
     &__row {
         width: 100%;
         position: relative;
@@ -178,6 +187,7 @@
         top: 25px;
         right: 25px;
         z-index: 1;
+
         .btn {
             background: none;
             border: 0;

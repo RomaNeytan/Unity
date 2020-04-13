@@ -228,7 +228,7 @@
     }
     @media (max-width: 500px){
         &__content{
-            border-width: 10px;
+            border-width: 10px !important;
         }
         margin: -85px 0px 75px 0px;
     }

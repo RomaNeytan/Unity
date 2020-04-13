@@ -4,10 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Unity Company">
+    <meta name = "keywords" content = "Unity,design,support,depelopers">
+
     <title>Unity</title>
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
-
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="fancybox/css/jquery.fancybox.min.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -183,20 +195,20 @@
     </svg>
     <div class="main__wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" id = "h-header">
             <div class="header__inner">
-                <div class="header__logo logo">
+                <div class="header__logo logo" id = "h-logo">
                     <a href="#" class="logo">Unity</a>
                 </div>
                 <!-- Main nav -->
-                <nav class="header-menu">
+                <nav class="header-menu" id = "header-menu">
                     <ul class="header-menu-list">
-                        <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Home</a></li>
-                        <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">About us</a></li>
-                        <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Services</a></li>
-                        <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Portfolio</a></li>
-                        <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Blog</a></li>
-                        <li class="header-menu-list__item"><a href="#" class="header-menu-list__link">Shop</a></li>
+                        <li data-scroll = "#banner" class="header-menu-list__item"><a href="#" class="header-menu-list__link">Home</a></li>
+                        <li data-scroll = "#about" class="header-menu-list__item"><a href="#" class="header-menu-list__link">About us</a></li>
+                        <li data-scroll = "#services" class="header-menu-list__item"><a href="#" class="header-menu-list__link">Services</a></li>
+                        <li data-scroll = "#portfolio" class="header-menu-list__item"><a href="#" class="header-menu-list__link">Portfolio</a></li>
+                        <li data-scroll = "#blog" class="header-menu-list__item"><a href="#" class="header-menu-list__link">Blog</a></li>
+                        <li data-scroll = "#shop" class="header-menu-list__item"><a href="#" class="header-menu-list__link">Shop</a></li>
                         <li>
                             <a href="#" class="header-menu-list__item">
                                 <svg class="header-menu-list__iccon">
@@ -207,13 +219,13 @@
                     </ul>
                 </nav>
                 <!-- Burger -->
-                <button class="nav-toggle">
+                <button class="nav-toggle" id = "burger">
                     <span class="nav-toggle__item">Menu</span>
                 </button>
             </div>
         </header>
         <!-- Banner -->
-        <div class="banner">
+        <div class="banner" id = "banner">
             <div class="banner__inner">
                 <div class="banner-social">
                     <a href="#" class="banner-social__item">
@@ -237,7 +249,7 @@
                     </div>
                     <div class="banner-scroll">
                         <h6 class="banner-scroll__title">Scroll</h6>
-                        <a href="#" class="banner-scroll__item">
+                        <a href="#" class="banner-scroll__item" data-scroll = "#portfolio">
                             <svg class="banner-scroll__iccon">
                                 <use xlink:href="#arrowBottom"></use>
                             </svg>
@@ -250,7 +262,7 @@
             </div>
         </div>
         <!-- Invites -->
-        <section class="invites">
+        <section class="invites" id = "about">
             <div class="container">
                 <div class="invites__header section-header">
                     <div class="section-header__number">01.</div>
@@ -316,7 +328,7 @@
             </div>
         </section>
         <!-- Clients -->
-        <section class="clients">
+        <section class="clients" id = "services">
             <div class="container">
                 <div class="clients__header">
                     <h2 class="clients__title">We are unity</h2>
@@ -329,7 +341,7 @@
             </div>
             <!-- Button video modal -->
             <div class="clients__button">
-                <a href="#" class="btn"></a>
+                <a href="https://www.youtube.com/watch?v=L054Xd97_rk" data-fancybox class="btn"></a>
             </div>
         </section>
         <!-- Details -->
@@ -347,14 +359,23 @@
             </div>
         </div>
         <!-- Wedo -->
-        <div class="wedo">
+        <div class="wedo" id = "portfolio">
             <div class="container">
                 <div class="wedo__inner">
-                    <div class="wedo__slider">
+                    <div class="wedo__slider" id = "w-slider">
+                        <!-- 1 -->
                         <div class="wedo__column">
                             <div class="wedo-item">
                                 <div class="wedo-item__img ibg">
                                     <img src="images/wedo/flower.png" alt="Flower">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="wedo__column">
+                            <div class="wedo-item">
+                                <div class="wedo-item__img ibg">
+                                    <img src="images/wedo/44.png" alt="Bicycle">
                                 </div>
                             </div>
                         </div>
@@ -413,7 +434,7 @@
                     <!-- Modal -->
                     <div class="wedo-modal">
                         <div class="wedo-modal__row">
-                            <div class="wedo-modal__close">
+                            <div class="wedo-modal__close" id = "m-close">
                                 <button class="btn">
                                     <svg class="wedo-modal__iccon">
                                         <use xlink:href="#close"></use>
@@ -434,7 +455,7 @@
             <div class="section-header__number section-header__number_wedo">03.</div>
         </div>
         <!-- Customers -->
-        <section class="customers">
+        <section class="customers" id = "blog">
             <div class="container">
                 <div class="customers__inner">
                     <h2 class="customers__title">global company with a local feel.</h2>
@@ -573,7 +594,7 @@
             </div>
         </section>
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer" id = "shop">
             <div class="container">
                 <div class="footer-header">
                     <div class="footer-header__call">
@@ -685,6 +706,8 @@
     </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src = "fancybox/js/jquery.fancybox.min.js"></script>
+    <script src = "js/slick.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 
